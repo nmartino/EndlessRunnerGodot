@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpshu0g3xa4xo"]
+
+[ext_resource type="Texture2D" uid="uid://d1vrn3xtu4pv8" path="res://Juego Ricotero/Mecha.png" id="1_w3kd6"]
+
+[node name="Mecha" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w3kd6")
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-1, 4, 2.33333, 9.66667, 6, 14.3333, 16.6667, 14.3333, 13, 23.6667, 42, 21.3333, 36, 0.666667, 29.6667, -7.33333, 20.6667, -7.66667, 16.6667, -11.6667, 11.3333, -18, 2.66667, -18.3333, -2.66667, -18.3333, -5.33333, -16)

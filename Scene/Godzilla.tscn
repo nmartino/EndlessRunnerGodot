@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://k3bqbvkafw2c"]
+
+[ext_resource type="Texture2D" uid="uid://ck44e5sxwmd3e" path="res://Juego Ricotero/Godzilla.png" id="1_ruue4"]
+
+[node name="Godzilla" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-121, -107)
+texture = ExtResource("1_ruue4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-214, -13)
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(45.25, 2.25, 49.25, 2.5, 51, 12, 43.5, 16.5, 33.5, 18.75, 27.25, 19.75, 27, 21.75, 31.5, 22, 44.25, 20.25, 53.5, 18, 59, 10.25, 58.5, 4.25, 55.5, -3.75, 45, -9.5, 37.75, 1.5)

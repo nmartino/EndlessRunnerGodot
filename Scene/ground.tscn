@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://vi3w0mgk58my"]
+
+[ext_resource type="Texture2D" uid="uid://cmqgyc3btd11r" path="res://Juego Ricotero/Piso.png" id="1_yw1q7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbjrp"]
+size = Vector2(2314.75, 54.5)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 553)
+texture = ExtResource("1_yw1q7")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1158.63, 617.75)
+shape = SubResource("RectangleShape2D_gbjrp")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://chpg4f7xma3tc"]
+
+[ext_resource type="Texture2D" uid="uid://dxc52fkgwnd6v" path="res://Juego Ricotero/Nube.png" id="1_35ryb"]
+
+[node name="nefe" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_35ryb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2.38419e-07, 8)
+scale = Vector2(3.95833, 1.62264)
+polygon = PackedVector2Array(-13.5, 13, -13.5, -13, 13.5, -13, 13.5, 13.5)

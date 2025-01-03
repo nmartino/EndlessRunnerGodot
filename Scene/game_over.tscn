@@ -1,0 +1,125 @@
+[gd_scene load_steps=13 format=3 uid="uid://b7okokmk1p1fo"]
+
+[ext_resource type="Texture2D" uid="uid://2xnvdqaxr2lm" path="res://game_over/Rafa meme1.png" id="1_4ax8w"]
+[ext_resource type="Texture2D" uid="uid://dkb7r0dnef03n" path="res://game_over/Rafa meme2.png" id="2_fvtyi"]
+[ext_resource type="Texture2D" uid="uid://cwowieobcr0ed" path="res://game_over/Rafa meme3.png" id="3_slyv8"]
+[ext_resource type="Texture2D" uid="uid://1whq2kqj0t8c" path="res://game_over/Rafa meme4.png" id="4_qqlwe"]
+[ext_resource type="Texture2D" uid="uid://bhi3t16qc4q3l" path="res://game_over/Rafa meme5.png" id="5_a6qse"]
+[ext_resource type="FontFile" uid="uid://dxqhsr38guwjh" path="res://mago3.ttf" id="6_0r6ow"]
+
+[sub_resource type="Animation" id="Animation_4ee7k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animacion:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_4ax8w")]
+}
+
+[sub_resource type="Animation" id="Animation_nuyn1"]
+resource_name = "game_over"
+length = 3.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animacion:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_4ax8w"), ExtResource("2_fvtyi"), ExtResource("3_slyv8"), ExtResource("4_qqlwe"), ExtResource("5_a6qse")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"hide"
+}, {
+"args": [],
+"method": &"show"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animacion")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pjedo"]
+_data = {
+"RESET": SubResource("Animation_4ee7k"),
+"game_over": SubResource("Animation_nuyn1")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w5fj"]
+bg_color = Color(0.203637, 0.325288, 0.0990364, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cfkr"]
+bg_color = Color(0.331449, 0.501471, 0.251008, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajjfi"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="animacion" type="Sprite2D" parent="."]
+process_mode = 3
+position = Vector2(342, 329)
+scale = Vector2(3, 3)
+texture = ExtResource("1_4ax8w")
+
+[node name="player" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_pjedo")
+}
+
+[node name="Button" type="Button" parent="."]
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(150, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_0r6ow")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/hover = SubResource("StyleBoxFlat_8w5fj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2cfkr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ajjfi")
+text = "RESTART"

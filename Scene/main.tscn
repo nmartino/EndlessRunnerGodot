@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsb7adfxjxb2q"]
+
+[ext_resource type="PackedScene" uid="uid://c0yand80ecemr" path="res://Scene/bg.tscn" id="1_nfagn"]
+[ext_resource type="Script" path="res://Scene/main.gd" id="1_qd0fn"]
+[ext_resource type="PackedScene" uid="uid://vi3w0mgk58my" path="res://Scene/ground.tscn" id="2_trgsx"]
+[ext_resource type="PackedScene" uid="uid://beqk181p2his6" path="res://Scene/ricotero.tscn" id="3_o7qw5"]
+[ext_resource type="PackedScene" uid="uid://b3017t5ntowrb" path="res://Scene/hud.tscn" id="5_nmqie"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_qd0fn")
+
+[node name="BG" parent="." instance=ExtResource("1_nfagn")]
+layer = -90
+
+[node name="Ricotero" parent="." instance=ExtResource("3_o7qw5")]
+position = Vector2(54, 441)
+
+[node name="Ground" parent="." instance=ExtResource("2_trgsx")]
+position = Vector2(0, -84)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(349, 325)
+
+[node name="HUD" parent="." instance=ExtResource("5_nmqie")]

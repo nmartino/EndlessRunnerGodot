@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0yand80ecemr"]
+
+[ext_resource type="Texture2D" uid="uid://dl41diwg38jrj" path="res://Juego Ricotero/Fondo 01.png" id="1_07jnc"]
+[ext_resource type="Texture2D" uid="uid://cmqgyc3btd11r" path="res://Juego Ricotero/Piso.png" id="2_8ly0u"]
+[ext_resource type="Texture2D" uid="uid://blg1pih83bbl3" path="res://Juego Ricotero/Fondo 02.png" id="2_eyrm2"]
+[ext_resource type="Texture2D" uid="uid://b4jk8hlm40rl3" path="res://Juego Ricotero/Fondo 03.png" id="3_40j0n"]
+[ext_resource type="Texture2D" uid="uid://pg5djb7ogs8b" path="res://Juego Ricotero/Fondo 04.png" id="4_fu0w4"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="solidGreen2" type="Sprite2D" parent="."]
+texture = ExtResource("1_07jnc")
+centered = false
+
+[node name="ground" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(2304, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+position = Vector2(1151, 494)
+texture = ExtResource("2_8ly0u")
+
+[node name="middle" type="ParallaxLayer" parent="."]
+position = Vector2(0, -22)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(748, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="middle"]
+position = Vector2(0, 391)
+texture = ExtResource("2_eyrm2")
+centered = false
+
+[node name="middle2" type="ParallaxLayer" parent="."]
+position = Vector2(-3, -101)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(672, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="middle2"]
+position = Vector2(-2, 514)
+texture = ExtResource("3_40j0n")
+centered = false
+
+[node name="middle3" type="ParallaxLayer" parent="."]
+position = Vector2(-1, -2)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(3352, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="middle3"]
+position = Vector2(0, 342)
+texture = ExtResource("4_fu0w4")
+centered = false

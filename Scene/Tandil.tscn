@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cakrolxhm437h"]
+
+[ext_resource type="Texture2D" uid="uid://3kq4jb5q2aj7" path="res://Juego Ricotero/TandiLoveLive.png" id="1_8hind"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdec1"]
+size = Vector2(142, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4vcd"]
+size = Vector2(54, 60)
+
+[node name="Tandil" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8hind")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 30)
+shape = SubResource("RectangleShape2D_rdec1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_g4vcd")
